@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="vieport" content="width=device-width, initial-scale=1">
+	<title>跨设备组合定义oversetp device</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="bootstrap3/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		div .col-md-1 {background:#ffc;border: 1px; }
+		div .col-md-8 {background:#fcc;border: 1px; }
+		div .col-md-4 {background:#ffc;border: 1px; }
+		div .col-md-6 {background:#aaffff;border: 1px; }
+		div .col-sm-3 {background:#efaafc;border: 1px; }
+		div .col-md-3 {background:#ddc;border: 1px; }
+		div .col-md-9 {background:#edc;border: 1px; }
+		div .col-md-5 {background:#eec;border: 1px; }
+
+		.col-xs-12
+		.col-sm-12
+		.col-md-12
+		.col-log-12{
+			width: 100%;
+		}
+
+		@media(min-width: 768px){
+			.container{width: 750px;}
+		}
+		@media(min-width:992px ){
+			.container{ width: 970px;}
+		}
+		@media(min-width:1200px){
+			.container{width: 1170px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-8">.col-sm-12 .col-md-8</div>
+			<div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4</div>
+		</div>
+		<div class="row">
+			<div class='col-sm-6 col-md-4'>.col-sm-6 .col-md-4</div>
+			<div class='col-sm-6 col-md-4'>.col-sm-6 .col-md-4</div>
+			<div class='col-sm-6 col-md-4'>.col-sm-6 .col-md-4</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">.col-sm-6</div>
+			<div class="col-sm-6">.col-sm-6</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 col-xs-6">.col-sm-3 大大大大大大大大大大大大大大大大大大大大大大大大</div>
+			<div class="col-sm-3 col-xs-6">.col-sm-3</div>
+			<div class="clearfix visible-xs"></div>
+			<div class="col-sm-3 col-xs-6">.col-sm-3</div>
+			<div class="col-sm-3 col-xs-6">.col-sm-3</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+			<div class="col-sm-5 col-md-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-md-6</div>
+		</div>
+		<div class="row" id="acb">
+			<div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+			<div class="col-sm-6 col-md-5 col-md-offset-2 col-log-6 col-lg-offset-0">col-sm-6 col-md-5 col-md-offset-2 col-log-6 col-lg-offset-0</div>
+		</div>
+		<button type="button" class="btn btn-xs btn-primary">Primary</button>
+		<button type="button" class="btn btn-lg btn-success">Success</button>
+		<div class="alert alert-warning">alert alert-waring</div>
+		<div class='alert alert-danger'>alert alert-danger</div>
+		<div class="well well-lg">well well-lg</div>
+		<div class="well well-sm">well <a href="www.google.com">google</a> well-lg</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('#acb').on('click.acb',function(event){alert(1)})
+</script>
+</html>
